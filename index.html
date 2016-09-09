@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>we're upgrading our system</title>
+
+    <style type="text/css">
+        #background {
+            background: url('./images/foreground.png') 5% 5%, url('./images/midground.png') 50% 50%, url('./images/background.png') 90% 110%;
+            width: 500px;
+            height: 500px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            -webkit-transition: right 100s linear;
+            -moz-transition: right 100s linear;
+            -o-transition: right 100s linear;
+            -ms-transition: right 100s linear;
+            transition: right 100s linear;
+
+        }
+
+        body:target #background {
+            right: 0px;
+        }
+
+        body:hover #background {
+            right: -9999px;
+        }
+
+        #content {
+            margin: 6em 10em;           
+            opacity: 0.6;            
+            padding: 3em;
+           
+        }
+
+        #content h2 {
+            margin: 1em 0;
+            font-weight: bold;
+            font-size:  30px;
+            color: #fff;
+            opacity: 0.95;
+            -webkit-animation: loadbars 0.6s ease-in-out infinite -0.2s;
+        }
+
+        #content:hover{
+            opacity:  0.95;
+            color: white;
+        }
+
+        #logo{
+            position: absolute;
+            opacity: 0.65;
+            width: 100%;
+            text-align: center;
+            transition: all 2s linear;
+            -webkit-transition: all 2s linear; /** Chrome & Safari **/
+            -moz-transition: all 2s linear; /** Firefox **/
+            -o-transition: all 2s linear; /** Opera **/
+        }
+        #logo:hover{
+            transform: translate(350px,0);
+    -webkit-transform: translate(350px,0); /** Chrome & Safari **/
+    -o-transform: translate(350px,0); /** Opera **/
+    -moz-transform: translate(350px,0); /** Firefox **/
+        }
+        #logo img{
+            width: 500px;
+            
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div>
+            <div id="background"></div>
+            <div id="content">
+                <h2>Oops, we're upgrading our system...</h2>
+                <h2>will come with more cool features soon</h2>
+            </div>
+            <div id="logo">
+                <img src="./images/rab_logo_white.svg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
